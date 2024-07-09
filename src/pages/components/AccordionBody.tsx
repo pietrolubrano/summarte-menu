@@ -14,18 +14,18 @@ const AccordionBody = ({ category } : { category: Category }) => {
     const products = useAppSelector((state: RootState) => state.products.data)
 
     return(
-        <Accordion.Body className="p-0">
+        <Accordion.Body className="p-0 border-2">
             <ListGroup>
                 {
                     products
                     .filter(product => product.categoryName === category.name)
                     .map(product => <React.Fragment key={product.id}>
-                        <ListGroup.Item  className="border-0 px-4 lh-sm fw-bold" style={{ fontSize: '0.9rem'}}>
-                        <Row >
+                        <ListGroup.Item  className="border-0 ps-3 pe-4 py-2 lh-sm fw-bold" style={{ fontSize: '0.9rem'}}>
+                        <Row className="ps-3">
 
                             <Col xs={7} className="d-flex align-items-center">
 
-                                <Row >
+                                <Row>
                                     <Col xs={12} className="px-2">
                                         {product.name}
                                     </Col>
@@ -36,16 +36,16 @@ const AccordionBody = ({ category } : { category: Category }) => {
                             
                             </Col>
                            
-                            <Col xs={5} className="d-flex align-items-center justify-content-end p-0">
+                            {/* <Col xs={5} className="d-flex align-items-center justify-content-end p-0">
                                 
-                                <span className="float-end me-1" style={{ fontSize: '0.9rem'}}>{product.price} €</span>
+                                <span className="float-end me-1" style={{ fontSize: '0.9rem'}}>{product.price} €</span> */}
                                 <AddProductButton product={product}/>
 
-                            </Col>
+                            {/* </Col> */}
                         </Row>
                         
                     </ListGroup.Item>
-                    <hr className="p-0 m-0" />
+                   {/*  <hr className="p-0 m-0" /> */}
                     </React.Fragment>)
                 }
             </ListGroup>

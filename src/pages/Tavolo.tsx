@@ -11,7 +11,7 @@ const Tavolo = () => {
             <Row>
                 <Col xs={8} className="p-3 pb-1" style={{ fontSize: '0.9rem'}}>
                     <p className="fs-4 mb-1 fw-bold" style={{ color: 'greenyellow'}}>
-                        Benvenuto :-)
+                        Benvenuto 🙂
                     </p>
                     <p>
                         puoi compilare qui la tua ordinazione

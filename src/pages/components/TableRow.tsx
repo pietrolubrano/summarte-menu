@@ -13,13 +13,13 @@ const TableRow = ({ item } : { item: CartItem }) => {
 
     return(
         <tr>
-            <td>
+            <td className="text-center" style={{ width: 40 }}>
                 {item.quantity}
             </td>
-            <td>
+            <td className="px-0">
                 {findItem().name}
             </td>
-            <td className="text-end">
+            <td className="text-end pe-3" style={{  width: 40 }}>
                 {findItem().price*item.quantity} €
             </td>
         </tr>
